@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+	</head>
+	<body>
+		<img src="img/1.jpg" id="myShow"/>
+		<script>
+			var oShow=document.getElementById('myShow');
+			window.onload=function()
+			{
+				setInterval('show()',1000);
+			}
+			var img=new Array(4);
+			var nums=1;
+			for(var i=1;i<img.length;i++)
+			{
+				img[i]=new Image();
+			}
+			function show()
+			{
+				oShow.src="img/"+nums+".jpg";
+				nums++;
+				if(nums>4)
+				nums=1;
+			}
+		</script>
+	</body>
+</html>
